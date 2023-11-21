@@ -10,6 +10,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import com.example.blackjack.Models.Routes
+import com.example.blackjack.Screens.MenuPrincipal
 import com.example.blackjack.ui.theme.BlackJackTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,25 +26,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    val navController = rememberNavController()
+                    NavHost(navController = navController,startDestination = Routes.menuPrincipal.routes){
+                        Composable(Routes.menuPrincipal.routes){ MenuPrincipal(navController)}
+                    }
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    BlackJackTheme {
-        Greeting("Android")
-    }
-}
+
