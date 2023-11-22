@@ -11,9 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.blackjack.Models.Routes
 import com.example.blackjack.Screens.MenuPrincipal
+import com.example.blackjack.Screens.SoloUnJugador
 import com.example.blackjack.ui.theme.BlackJackTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +30,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
                     NavHost(navController = navController,startDestination = Routes.menuPrincipal.routes){
-                        Composable(Routes.menuPrincipal.routes){ MenuPrincipal(navController)}
+                        composable(Routes.menuPrincipal.routes){ MenuPrincipal(navController)}
+                        composable(Routes.soloUnJugador.routes){SoloUnJugador(navController)}
                     }
 
                 }
