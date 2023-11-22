@@ -21,6 +21,7 @@ fun MenuPrincipal(navController: NavHostController){
             Button(onClick = { navController.navigate(Routes.soloUnJugador.routes) }) {
             }
     }
+
 }
 
 @Composable
