@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
                         composable(Routes.soloUnJugador.routes){SoloUnJugador(navController)}
                     }
 
+
                 }
             }
         }
