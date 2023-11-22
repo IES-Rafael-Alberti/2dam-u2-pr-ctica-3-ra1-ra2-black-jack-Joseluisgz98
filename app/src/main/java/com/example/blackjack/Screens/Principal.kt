@@ -3,6 +3,7 @@ package com.example.blackjack.Screens
 import android.widget.Button
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -20,15 +21,17 @@ import com.example.blackjack.Models.Routes
 @Composable
 fun MenuPrincipal(navController: NavHostController){
     var botonUnJugador by rememberSaveable{mutableStateOf("1 Jugador")}
+    var titulo by rememberSaveable { mutableStateOf("Blackjack") }
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.White)){
-            Text(text = "Black Jack")
+        Column {
+            Text(text = titulo)
             Button(onClick = { navController.navigate(Routes.soloUnJugador.routes) }) {
                 Text(text = botonUnJugador)
             }
+        }
     }
-
 }
 
 
