@@ -11,9 +11,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.blackjack.Cardgames.data.Routes
-import com.example.blackjack.Screens.DosJugador
-import com.example.blackjack.Screens.MenuPrincipal
-import com.example.blackjack.Screens.SoloUnJugador
+import com.example.blackjack.Cardgames.ui.DosJugador
+import com.example.blackjack.Cardgames.ui.MenuPrincipal
+import com.example.blackjack.Cardgames.ui.SoloUnJugador
 import com.example.blackjack.ui.theme.BlackJackTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,9 +28,9 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
                     NavHost(navController = navController,startDestination = Routes.menuPrincipal.routes){
-                        composable(Routes.menuPrincipal.routes){ MenuPrincipal(navController)}
-                        composable(Routes.soloUnJugador.routes){SoloUnJugador(navController)}
-                        composable(Routes.dosJugadores.routes){DosJugador(navController)}
+                        composable(Routes.menuPrincipal.routes){ MenuPrincipal(navController) }
+                        composable(Routes.soloUnJugador.routes){ SoloUnJugador(navController) }
+                        composable(Routes.dosJugadores.routes){ DosJugador(navController) }
                     }
                 }
             }

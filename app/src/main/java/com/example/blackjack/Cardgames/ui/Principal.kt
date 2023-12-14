@@ -1,4 +1,4 @@
-package com.example.blackjack.Screens
+package com.example.blackjack.Cardgames.ui
 
 
 import androidx.compose.foundation.Image
