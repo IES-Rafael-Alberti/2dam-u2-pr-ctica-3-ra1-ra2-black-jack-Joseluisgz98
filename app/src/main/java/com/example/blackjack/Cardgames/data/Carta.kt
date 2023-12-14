@@ -3,7 +3,7 @@ package com.example.blackjack.Cardgames.data
 import androidx.annotation.DrawableRes
 
 data class Carta(
-    var nombre:Valor,
+    var puntos:Valor,
     var palo:Palos,
     var puntosMinimos:Int,
     var puntosMaximos:Int,

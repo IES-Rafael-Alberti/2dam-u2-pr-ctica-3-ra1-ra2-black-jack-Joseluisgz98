@@ -1,7 +1,7 @@
 package com.example.blackjack.Cardgames.data
 
 enum class Palos {
-    NINGUNA,
+    PORTADA,
     CORAZONES,
     TREBOLES,
     DIAMANTES,

@@ -1,7 +1,7 @@
 package com.example.blackjack.Cardgames.data
 
 enum class Valor {
-    NINGUNA,
+    PORTADA,
     AS,
     DOS,
     TRES,
