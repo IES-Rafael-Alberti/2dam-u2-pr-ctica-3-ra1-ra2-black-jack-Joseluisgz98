@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.blackjack.Models.Routes
+import com.example.blackjack.Cardgames.data.Routes
 import com.example.blackjack.Screens.DosJugador
 import com.example.blackjack.Screens.MenuPrincipal
 import com.example.blackjack.Screens.SoloUnJugador
@@ -32,9 +32,6 @@ class MainActivity : ComponentActivity() {
                         composable(Routes.soloUnJugador.routes){SoloUnJugador(navController)}
                         composable(Routes.dosJugadores.routes){DosJugador(navController)}
                     }
-
-
-
                 }
             }
         }
