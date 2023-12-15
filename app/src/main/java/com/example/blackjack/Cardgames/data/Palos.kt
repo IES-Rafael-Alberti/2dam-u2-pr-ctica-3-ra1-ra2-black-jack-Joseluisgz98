@@ -1,9 +1,12 @@
 package com.example.blackjack.Cardgames.data
 
+/**
+ * Clase enumerada que representa
+ */
 enum class Palos {
     PORTADA,
-    CORAZONES,
-    TREBOLES,
-    DIAMANTES,
-    PICAS
+    C,//CORAZONES
+    T,//TREBOLES
+    D,//DIAMANTES
+    P//PICAS
 }
